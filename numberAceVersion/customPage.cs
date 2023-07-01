@@ -37,5 +37,23 @@ namespace numberAceVersion
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized; // minimises the browser
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized; // maximises the browser
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Close(); // closes the browser
+
+        }
     }
 }

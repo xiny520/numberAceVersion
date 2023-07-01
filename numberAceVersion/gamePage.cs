@@ -70,42 +70,7 @@ namespace numberAceVersion
 
         private void generate_Question(object sender, EventArgs e)
         {
-            if (carImg.Bounds.IntersectsWith(finishImg.Bounds) == true)
-            {
-                if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == false)
-                {
-                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == false)
-                    {
-                        endGame(sender, e);
-                        gamePanel.Visible = true;
-                        carImg.BringToFront();
-                        awards.Image = Properties.Resources.pixil_frame_03;
-                    }
-                }
-            }
-            if (carImg.Bounds.IntersectsWith(finishImg.Bounds) == false)
-            {
-                if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == true)
-                {
-                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == false)
-                    {
-                        endGame(sender, e);
-                        gamePanel.Visible = true;
-                        carImg.BringToFront();
-                        awards.Image = Properties.Resources.pixil_frame_02;
-                    }
-                }
-                if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == true)
-                {
-                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == true)
-                    {
-                        endGame(sender, e);
-                        gamePanel.Visible = true;
-                        carImg.BringToFront();
-                        awards.Image = Properties.Resources.pixil_frame_01;
-                    }
-                }
-            }
+            
             // basically resetting everything
             op1 = false; // set op1 as false
             op2 = false; // set op2 as false
@@ -381,6 +346,42 @@ namespace numberAceVersion
                 carImg.Location = new Point(200, 700);
                 correctCount = 0;
             }
+            if (carImg.Bounds.IntersectsWith(finishImg.Bounds) == true)
+            {
+                if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == false)
+                {
+                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == false)
+                    {
+                        endGame(sender, e);
+                        gamePanel.Visible = true;
+                        carImg.BringToFront();
+                        awards.Image = Properties.Resources.pixil_frame_03;
+                    }
+                }
+            }
+            if (carImg.Bounds.IntersectsWith(finishImg.Bounds) == false)
+            {
+                if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == true)
+                {
+                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == false)
+                    {
+                        endGame(sender, e);
+                        gamePanel.Visible = true;
+                        carImg.BringToFront();
+                        awards.Image = Properties.Resources.pixil_frame_02;
+                    }
+                }
+                if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == true)
+                {
+                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == true)
+                    {
+                        endGame(sender, e);
+                        gamePanel.Visible = true;
+                        carImg.BringToFront();
+                        awards.Image = Properties.Resources.pixil_frame_01;
+                    }
+                }
+            }
         }
         private void correct_Answer(object sender, EventArgs e) // method for correct answer
         {
@@ -525,17 +526,17 @@ namespace numberAceVersion
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Minimized; // minimises the browser
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Maximized; // maximises the browser
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); // closes the browser
         }
     }
 }
