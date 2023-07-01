@@ -38,12 +38,20 @@ namespace numberAceVersion
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
+            questionLabel.Text = ""; // empty the question
+            optionButton1.Enabled = false;
+            optionButton2.Enabled = false;
+            optionButton3.Enabled = false;
+            optionButton4.Enabled = false;
+            optionButton1.Text = ""; // and this option button
+            optionButton2.Text = ""; // and this one
+            optionButton3.Text = ""; // and this one
+            optionButton4.Text = ""; // and this one
             seconds = 3;
             miniTimer.Start();
             countdownPanel.Visible = false;
             lblMini.Visible = false;
             gamePanel.Visible = false;
-            generate_Question(sender, e);
         }
 
         public void addGo(object sender, EventArgs e)
@@ -414,7 +422,7 @@ namespace numberAceVersion
             optionButton3.Text = ""; // and this one
             optionButton4.Text = ""; // and this one
             totalScore.Text = score.ToString(); // write in the totalScore label: "Total Score = (insert score)"
-            carImg.Location = new Point(61, 692);
+            carImg.Location = new Point(62, 725);
         }
         private void miniTimer_Tick(object sender, EventArgs e)
         {
@@ -427,7 +435,7 @@ namespace numberAceVersion
             {
                 miniTimer.Stop(); // stop the shorter timer
                 lblMini.Visible = false; // make the label displaying the shorter timer invisible
-                generate_Question(sender, e); // go the generate_Question method (down below!)
+                generate_Question(sender, e); // go the generate_Question method
                 highScoreLabel.Text = highscore.ToString();
                 score = 0;
                 //panel6.Location = new Point(200, 700);
@@ -517,7 +525,7 @@ namespace numberAceVersion
             miniTimer.Start();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) 
         {
             this.Hide(); // hide this form (gamepage)
             homePage back = new homePage(); // link to homepage

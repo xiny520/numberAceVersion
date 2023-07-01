@@ -61,6 +61,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.gameQuestionBack.SuspendLayout();
             this.optionsPanel2.SuspendLayout();
             this.optionsPanel1.SuspendLayout();
@@ -282,19 +284,23 @@
             // 
             // gamePanel
             // 
+            this.gamePanel.BackColor = System.Drawing.Color.White;
+            this.gamePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gamePanel.Controls.Add(this.textBox1);
+            this.gamePanel.Controls.Add(this.label2);
             this.gamePanel.Controls.Add(this.button3);
             this.gamePanel.Controls.Add(this.button2);
             this.gamePanel.Controls.Add(this.awards);
             this.gamePanel.Controls.Add(this.rankingLbl);
             this.gamePanel.Controls.Add(this.gameLbl);
-            this.gamePanel.Location = new System.Drawing.Point(313, 784);
+            this.gamePanel.Location = new System.Drawing.Point(290, 572);
             this.gamePanel.Name = "gamePanel";
-            this.gamePanel.Size = new System.Drawing.Size(578, 311);
+            this.gamePanel.Size = new System.Drawing.Size(601, 523);
             this.gamePanel.TabIndex = 37;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(294, 224);
+            this.button3.Location = new System.Drawing.Point(310, 424);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(223, 65);
             this.button3.TabIndex = 4;
@@ -304,7 +310,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(64, 224);
+            this.button2.Location = new System.Drawing.Point(80, 424);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(142, 65);
             this.button2.TabIndex = 3;
@@ -427,6 +433,22 @@
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(60, 244);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(474, 25);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "choose a username you want to be displayed as";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(139, 317);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(306, 31);
+            this.textBox1.TabIndex = 43;
+            // 
             // gamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -491,5 +513,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
