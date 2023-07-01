@@ -58,6 +58,9 @@
             this.carImg = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.gameQuestionBack.SuspendLayout();
             this.optionsPanel2.SuspendLayout();
             this.optionsPanel1.SuspendLayout();
@@ -108,6 +111,9 @@
             // gameQuestionBack
             // 
             this.gameQuestionBack.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.gameQuestionBack.Controls.Add(this.button6);
+            this.gameQuestionBack.Controls.Add(this.button5);
+            this.gameQuestionBack.Controls.Add(this.button4);
             this.gameQuestionBack.Controls.Add(this.optionsPanel2);
             this.gameQuestionBack.Controls.Add(this.optionsPanel1);
             this.gameQuestionBack.Controls.Add(this.label1);
@@ -242,14 +248,10 @@
             // 
             // beginButton
             // 
-            this.beginButton.Location = new System.Drawing.Point(39, 958);
-            this.beginButton.Margin = new System.Windows.Forms.Padding(4);
+            this.beginButton.Location = new System.Drawing.Point(0, 0);
             this.beginButton.Name = "beginButton";
-            this.beginButton.Size = new System.Drawing.Size(178, 137);
-            this.beginButton.TabIndex = 35;
-            this.beginButton.Text = "BEGIN";
-            this.beginButton.UseVisualStyleBackColor = true;
-            this.beginButton.Click += new System.EventHandler(this.beginButton_Click);
+            this.beginButton.Size = new System.Drawing.Size(75, 23);
+            this.beginButton.TabIndex = 39;
             // 
             // countdownPanel
             // 
@@ -386,6 +388,45 @@
             this.panel1.Size = new System.Drawing.Size(936, 1127);
             this.panel1.TabIndex = 41;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(701, 16);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(84, 61);
+            this.button4.TabIndex = 41;
+            this.button4.Text = "-";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(912, 16);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(84, 61);
+            this.button5.TabIndex = 42;
+            this.button5.Text = "×";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.Location = new System.Drawing.Point(808, 16);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(84, 61);
+            this.button6.TabIndex = 43;
+            this.button6.Text = "□";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // gamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -447,5 +488,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button6;
     }
 }

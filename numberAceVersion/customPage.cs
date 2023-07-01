@@ -30,5 +30,12 @@ namespace numberAceVersion
             homePage back = new homePage(); // link to homepage
             back.Show(); // show homepage form
         }
+
+        private void customPage_Load(object sender, EventArgs e)
+        {
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

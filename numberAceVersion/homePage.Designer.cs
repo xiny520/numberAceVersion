@@ -74,6 +74,7 @@
             this.Controls.Add(this.button1);
             this.Name = "homePage";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.homePage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

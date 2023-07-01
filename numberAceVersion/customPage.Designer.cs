@@ -33,11 +33,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.beginButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.diviCheck = new System.Windows.Forms.CheckBox();
             this.multipCheck = new System.Windows.Forms.CheckBox();
             this.subtractionCheck = new System.Windows.Forms.CheckBox();
             this.additionCheck = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button5
@@ -92,17 +92,6 @@
             this.beginButton.UseVisualStyleBackColor = true;
             this.beginButton.Click += new System.EventHandler(this.beginButton_Click);
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::numberAceVersion.Properties.Resources.back_24838_640__1_;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(276, 272);
-            this.button1.TabIndex = 32;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // diviCheck
             // 
             this.diviCheck.AutoSize = true;
@@ -149,6 +138,17 @@
             this.additionCheck.Text = "Addition";
             this.additionCheck.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::numberAceVersion.Properties.Resources.back_24838_640__1_;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(276, 272);
+            this.button1.TabIndex = 32;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // customPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -166,6 +166,7 @@
             this.Controls.Add(this.additionCheck);
             this.Name = "customPage";
             this.Text = "customPage";
+            this.Load += new System.EventHandler(this.customPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

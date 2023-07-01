@@ -30,5 +30,12 @@ namespace numberAceVersion
             loginPage f2 = new loginPage();
             f2.Show();
         }
+
+        private void homePage_Load(object sender, EventArgs e)
+        {
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

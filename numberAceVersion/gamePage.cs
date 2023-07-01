@@ -35,7 +35,15 @@ namespace numberAceVersion
 
         private void gamePage_Load(object sender, EventArgs e)
         {
-
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+            seconds = 3;
+            miniTimer.Start();
+            countdownPanel.Visible = false;
+            lblMini.Visible = false;
+            gamePanel.Visible = false;
+            generate_Question(sender, e);
         }
 
         public void addGo(object sender, EventArgs e)
@@ -407,16 +415,6 @@ namespace numberAceVersion
             totalScore.Text = score.ToString(); // write in the totalScore label: "Total Score = (insert score)"
             carImg.Location = new Point(61, 692);
         }
-
-        private void beginButton_Click(object sender, EventArgs e)
-        {
-            seconds = 3;
-            miniTimer.Start();
-            countdownPanel.Visible = false;
-            lblMini.Visible = false;
-            gamePanel.Visible = false;
-        }
-
         private void miniTimer_Tick(object sender, EventArgs e)
         {
             countdownPanel.Visible = true;
@@ -523,6 +521,21 @@ namespace numberAceVersion
             this.Hide(); // hide this form (gamepage)
             homePage back = new homePage(); // link to homepage
             back.Show(); // show homepage form
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
