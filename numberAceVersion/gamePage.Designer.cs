@@ -33,31 +33,39 @@
             this.timerscreen = new System.Windows.Forms.Label();
             this.highScoreLabel = new System.Windows.Forms.Label();
             this.scorePoints = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.gameQuestionBack = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.optionsPanel1 = new System.Windows.Forms.Panel();
-            this.optionButton1 = new System.Windows.Forms.Button();
-            this.optionButton2 = new System.Windows.Forms.Button();
-            this.questionPanel = new System.Windows.Forms.Panel();
-            this.questionLabel = new System.Windows.Forms.Label();
-            this.totalScore = new System.Windows.Forms.Label();
             this.optionsPanel2 = new System.Windows.Forms.Panel();
             this.optionButton3 = new System.Windows.Forms.Button();
             this.optionButton4 = new System.Windows.Forms.Button();
+            this.optionsPanel1 = new System.Windows.Forms.Panel();
+            this.optionButton1 = new System.Windows.Forms.Button();
+            this.optionButton2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.questionPanel = new System.Windows.Forms.Panel();
+            this.questionLabel = new System.Windows.Forms.Label();
+            this.totalScore = new System.Windows.Forms.Label();
             this.countdownTimer = new System.Windows.Forms.Timer(this.components);
             this.miniTimer = new System.Windows.Forms.Timer(this.components);
             this.beginButton = new System.Windows.Forms.Button();
             this.countdownPanel = new System.Windows.Forms.Panel();
-            this.gamePanel = new System.Windows.Forms.Panel();
             this.gameLbl = new System.Windows.Forms.Label();
             this.rankingLbl = new System.Windows.Forms.Label();
+            this.gamePanel = new System.Windows.Forms.Panel();
+            this.finishImg = new System.Windows.Forms.PictureBox();
+            this.AlCar1 = new System.Windows.Forms.PictureBox();
+            this.carImg = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.AlCar2 = new System.Windows.Forms.PictureBox();
             this.gameQuestionBack.SuspendLayout();
+            this.optionsPanel2.SuspendLayout();
             this.optionsPanel1.SuspendLayout();
             this.questionPanel.SuspendLayout();
-            this.optionsPanel2.SuspendLayout();
             this.countdownPanel.SuspendLayout();
             this.gamePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.finishImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlCar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlCar2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMini
@@ -105,17 +113,6 @@
             this.scorePoints.Size = new System.Drawing.Size(0, 25);
             this.scorePoints.TabIndex = 23;
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::numberAceVersion.Properties.Resources.back_24838_640__1_;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(276, 272);
-            this.button1.TabIndex = 33;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // gameQuestionBack
             // 
             this.gameQuestionBack.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -130,85 +127,6 @@
             this.gameQuestionBack.Name = "gameQuestionBack";
             this.gameQuestionBack.Size = new System.Drawing.Size(1018, 1152);
             this.gameQuestionBack.TabIndex = 34;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(92, 1350);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(450, 83);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Total Score = ";
-            // 
-            // optionsPanel1
-            // 
-            this.optionsPanel1.Controls.Add(this.optionButton1);
-            this.optionsPanel1.Controls.Add(this.optionButton2);
-            this.optionsPanel1.Location = new System.Drawing.Point(139, 381);
-            this.optionsPanel1.Margin = new System.Windows.Forms.Padding(6);
-            this.optionsPanel1.Name = "optionsPanel1";
-            this.optionsPanel1.Size = new System.Drawing.Size(781, 209);
-            this.optionsPanel1.TabIndex = 8;
-            // 
-            // optionButton1
-            // 
-            this.optionButton1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.optionButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optionButton1.Location = new System.Drawing.Point(0, 0);
-            this.optionButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.optionButton1.Name = "optionButton1";
-            this.optionButton1.Size = new System.Drawing.Size(350, 209);
-            this.optionButton1.TabIndex = 3;
-            this.optionButton1.Text = "Option1";
-            this.optionButton1.UseVisualStyleBackColor = true;
-            this.optionButton1.Click += new System.EventHandler(this.optionButton1_Click);
-            // 
-            // optionButton2
-            // 
-            this.optionButton2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.optionButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optionButton2.Location = new System.Drawing.Point(431, 0);
-            this.optionButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.optionButton2.Name = "optionButton2";
-            this.optionButton2.Size = new System.Drawing.Size(350, 209);
-            this.optionButton2.TabIndex = 4;
-            this.optionButton2.Text = "Option 2";
-            this.optionButton2.UseVisualStyleBackColor = true;
-            this.optionButton2.Click += new System.EventHandler(this.optionButton2_Click);
-            // 
-            // questionPanel
-            // 
-            this.questionPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.questionPanel.Controls.Add(this.questionLabel);
-            this.questionPanel.Location = new System.Drawing.Point(87, 90);
-            this.questionPanel.Margin = new System.Windows.Forms.Padding(6);
-            this.questionPanel.Name = "questionPanel";
-            this.questionPanel.Size = new System.Drawing.Size(857, 217);
-            this.questionPanel.TabIndex = 7;
-            // 
-            // questionLabel
-            // 
-            this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.questionLabel.Location = new System.Drawing.Point(252, 56);
-            this.questionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(400, 102);
-            this.questionLabel.TabIndex = 1;
-            this.questionLabel.Text = "Question";
-            this.questionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // totalScore
-            // 
-            this.totalScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalScore.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.totalScore.Location = new System.Drawing.Point(528, 1350);
-            this.totalScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.totalScore.Name = "totalScore";
-            this.totalScore.Size = new System.Drawing.Size(204, 83);
-            this.totalScore.TabIndex = 8;
-            this.totalScore.Text = "0";
             // 
             // optionsPanel2
             // 
@@ -246,6 +164,85 @@
             this.optionButton4.UseVisualStyleBackColor = true;
             this.optionButton4.Click += new System.EventHandler(this.optionButton4_Click);
             // 
+            // optionsPanel1
+            // 
+            this.optionsPanel1.Controls.Add(this.optionButton1);
+            this.optionsPanel1.Controls.Add(this.optionButton2);
+            this.optionsPanel1.Location = new System.Drawing.Point(139, 381);
+            this.optionsPanel1.Margin = new System.Windows.Forms.Padding(6);
+            this.optionsPanel1.Name = "optionsPanel1";
+            this.optionsPanel1.Size = new System.Drawing.Size(781, 209);
+            this.optionsPanel1.TabIndex = 8;
+            // 
+            // optionButton1
+            // 
+            this.optionButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.optionButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optionButton1.Location = new System.Drawing.Point(0, 0);
+            this.optionButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.optionButton1.Name = "optionButton1";
+            this.optionButton1.Size = new System.Drawing.Size(350, 209);
+            this.optionButton1.TabIndex = 3;
+            this.optionButton1.Text = "Option1";
+            this.optionButton1.UseVisualStyleBackColor = true;
+            this.optionButton1.Click += new System.EventHandler(this.optionButton1_Click);
+            // 
+            // optionButton2
+            // 
+            this.optionButton2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.optionButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optionButton2.Location = new System.Drawing.Point(431, 0);
+            this.optionButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.optionButton2.Name = "optionButton2";
+            this.optionButton2.Size = new System.Drawing.Size(350, 209);
+            this.optionButton2.TabIndex = 4;
+            this.optionButton2.Text = "Option 2";
+            this.optionButton2.UseVisualStyleBackColor = true;
+            this.optionButton2.Click += new System.EventHandler(this.optionButton2_Click);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(92, 1350);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(450, 83);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Total Score = ";
+            // 
+            // questionPanel
+            // 
+            this.questionPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.questionPanel.Controls.Add(this.questionLabel);
+            this.questionPanel.Location = new System.Drawing.Point(87, 90);
+            this.questionPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.questionPanel.Name = "questionPanel";
+            this.questionPanel.Size = new System.Drawing.Size(857, 217);
+            this.questionPanel.TabIndex = 7;
+            // 
+            // questionLabel
+            // 
+            this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionLabel.Location = new System.Drawing.Point(252, 56);
+            this.questionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.questionLabel.Name = "questionLabel";
+            this.questionLabel.Size = new System.Drawing.Size(400, 102);
+            this.questionLabel.TabIndex = 1;
+            this.questionLabel.Text = "Question";
+            this.questionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // totalScore
+            // 
+            this.totalScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalScore.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.totalScore.Location = new System.Drawing.Point(528, 1350);
+            this.totalScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.totalScore.Name = "totalScore";
+            this.totalScore.Size = new System.Drawing.Size(204, 83);
+            this.totalScore.TabIndex = 8;
+            this.totalScore.Text = "0";
+            // 
             // countdownTimer
             // 
             this.countdownTimer.Interval = 1000;
@@ -275,20 +272,11 @@
             this.countdownPanel.Size = new System.Drawing.Size(806, 306);
             this.countdownPanel.TabIndex = 36;
             // 
-            // gamePanel
-            // 
-            this.gamePanel.Controls.Add(this.rankingLbl);
-            this.gamePanel.Controls.Add(this.gameLbl);
-            this.gamePanel.Location = new System.Drawing.Point(328, 671);
-            this.gamePanel.Name = "gamePanel";
-            this.gamePanel.Size = new System.Drawing.Size(578, 311);
-            this.gamePanel.TabIndex = 37;
-            // 
             // gameLbl
             // 
             this.gameLbl.AutoSize = true;
             this.gameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameLbl.Location = new System.Drawing.Point(67, 75);
+            this.gameLbl.Location = new System.Drawing.Point(67, 79);
             this.gameLbl.Name = "gameLbl";
             this.gameLbl.Size = new System.Drawing.Size(472, 91);
             this.gameLbl.TabIndex = 0;
@@ -298,17 +286,81 @@
             // 
             this.rankingLbl.AutoSize = true;
             this.rankingLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rankingLbl.Location = new System.Drawing.Point(227, 185);
+            this.rankingLbl.Location = new System.Drawing.Point(227, 189);
             this.rankingLbl.Name = "rankingLbl";
             this.rankingLbl.Size = new System.Drawing.Size(173, 63);
             this.rankingLbl.TabIndex = 1;
             this.rankingLbl.Text = "label2";
+            // 
+            // gamePanel
+            // 
+            this.gamePanel.Controls.Add(this.rankingLbl);
+            this.gamePanel.Controls.Add(this.gameLbl);
+            this.gamePanel.Location = new System.Drawing.Point(903, 753);
+            this.gamePanel.Name = "gamePanel";
+            this.gamePanel.Size = new System.Drawing.Size(578, 311);
+            this.gamePanel.TabIndex = 37;
+            // 
+            // finishImg
+            // 
+            this.finishImg.BackgroundImage = global::numberAceVersion.Properties.Resources.Finish_Line_PNG_HD;
+            this.finishImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.finishImg.Location = new System.Drawing.Point(61, 179);
+            this.finishImg.Name = "finishImg";
+            this.finishImg.Size = new System.Drawing.Size(852, 126);
+            this.finishImg.TabIndex = 38;
+            this.finishImg.TabStop = false;
+            // 
+            // AlCar1
+            // 
+            this.AlCar1.BackgroundImage = global::numberAceVersion.Properties.Resources._4_2_car_png_hd;
+            this.AlCar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AlCar1.Location = new System.Drawing.Point(326, 692);
+            this.AlCar1.Name = "AlCar1";
+            this.AlCar1.Size = new System.Drawing.Size(240, 188);
+            this.AlCar1.TabIndex = 39;
+            this.AlCar1.TabStop = false;
+            // 
+            // carImg
+            // 
+            this.carImg.BackgroundImage = global::numberAceVersion.Properties.Resources._3_2_car_free_download_png_thumb;
+            this.carImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.carImg.Location = new System.Drawing.Point(61, 692);
+            this.carImg.Name = "carImg";
+            this.carImg.Size = new System.Drawing.Size(240, 188);
+            this.carImg.TabIndex = 2;
+            this.carImg.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::numberAceVersion.Properties.Resources.back_24838_640__1_;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(276, 272);
+            this.button1.TabIndex = 33;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // AlCar2
+            // 
+            this.AlCar2.BackgroundImage = global::numberAceVersion.Properties.Resources._4_2_car_png_hd;
+            this.AlCar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AlCar2.Location = new System.Drawing.Point(627, 692);
+            this.AlCar2.Name = "AlCar2";
+            this.AlCar2.Size = new System.Drawing.Size(240, 188);
+            this.AlCar2.TabIndex = 40;
+            this.AlCar2.TabStop = false;
             // 
             // gamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1953, 1152);
+            this.Controls.Add(this.AlCar2);
+            this.Controls.Add(this.finishImg);
+            this.Controls.Add(this.AlCar1);
+            this.Controls.Add(this.carImg);
             this.Controls.Add(this.gamePanel);
             this.Controls.Add(this.beginButton);
             this.Controls.Add(this.countdownPanel);
@@ -321,13 +373,17 @@
             this.Text = "gamePage";
             this.Load += new System.EventHandler(this.gamePage_Load);
             this.gameQuestionBack.ResumeLayout(false);
+            this.optionsPanel2.ResumeLayout(false);
             this.optionsPanel1.ResumeLayout(false);
             this.questionPanel.ResumeLayout(false);
-            this.optionsPanel2.ResumeLayout(false);
             this.countdownPanel.ResumeLayout(false);
             this.countdownPanel.PerformLayout();
             this.gamePanel.ResumeLayout(false);
             this.gamePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.finishImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlCar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlCar2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,8 +410,12 @@
         private System.Windows.Forms.Timer miniTimer;
         private System.Windows.Forms.Button beginButton;
         private System.Windows.Forms.Panel countdownPanel;
-        private System.Windows.Forms.Panel gamePanel;
-        private System.Windows.Forms.Label rankingLbl;
         private System.Windows.Forms.Label gameLbl;
+        private System.Windows.Forms.Label rankingLbl;
+        private System.Windows.Forms.Panel gamePanel;
+        private System.Windows.Forms.PictureBox carImg;
+        private System.Windows.Forms.PictureBox finishImg;
+        private System.Windows.Forms.PictureBox AlCar1;
+        private System.Windows.Forms.PictureBox AlCar2;
     }
 }

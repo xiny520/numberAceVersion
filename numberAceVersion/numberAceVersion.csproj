@@ -101,5 +101,14 @@
   <ItemGroup>
     <None Include="Resources\back-24838_640 %281%29.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-2-car-free-download-png-thumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finish-Line-PNG-HD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4-2-car-png-hd.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

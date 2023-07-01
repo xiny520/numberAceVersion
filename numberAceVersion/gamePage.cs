@@ -335,7 +335,7 @@ namespace numberAceVersion
 
             if (correctCount > 8)
             {
-                //panel6.Location = new Point(200, 700);
+                carImg.Location = new Point(200, 700);
                 correctCount = 0;
             }
         }
@@ -344,7 +344,7 @@ namespace numberAceVersion
             score++; // add 1 to score
             scorePoints.Text = "+1"; // write "+1"
             totalScore.Text = score.ToString(); // display (new) total score
-            //panel6.Top = panel6.Top - 80; // move car up
+            carImg.Top = carImg.Top - 80; // move car up
             //ding.Play();
             gameQuestionBack.BackColor = Color.Green;
             correctCount++;
@@ -371,8 +371,7 @@ namespace numberAceVersion
             optionButton3.Text = ""; // and this one
             optionButton4.Text = ""; // and this one
             totalScore.Text = score.ToString(); // write in the totalScore label: "Total Score = (insert score)"
-            gamePanel.Visible = true;
-
+            
         }
 
         private void beginButton_Click(object sender, EventArgs e)
@@ -393,12 +392,44 @@ namespace numberAceVersion
             timerscreen.Text = seconds--.ToString();
             if (seconds < 0) // when timer ends basically
             {
-                endGame(sender, e);
+                //endGame(sender, e);
                 if (score > highscore)
                 {
                     highscore = score;
                 }
                 
+            }
+            if (carImg.Bounds.IntersectsWith(finishImg.Bounds))
+            {
+                endGame(sender,e);
+                gamePanel.Visible = true;
+                rankingLbl.Text = "Hooray! You ranked 1st!";
+                carImg.BringToFront();
+
+                if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds))
+                {
+                    gamePanel.Visible = true;
+                    rankingLbl.Text = "Better job next time! You ranked 2nd!";
+
+                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds))
+                    {
+                        gamePanel.Visible = true;
+                        rankingLbl.Text = "Better job next time! You ranked 3rd!";
+                    }
+
+                }
+                if (AlCar2.Bounds.IntersectsWith(finishImg.Bounds))
+                {
+                    gamePanel.Visible = true;
+                    rankingLbl.Text = "Better job next time! You ranked 2nd!";
+
+                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds))
+                    {
+                        gamePanel.Visible = true;
+                        rankingLbl.Text = "Better job next time! You ranked 3rd!";
+                    }
+                }
+
             }
         }
 

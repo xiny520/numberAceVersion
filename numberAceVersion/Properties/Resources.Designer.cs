@@ -63,9 +63,39 @@ namespace numberAceVersion.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3_2_car_free_download_png_thumb {
+            get {
+                object obj = ResourceManager.GetObject("3-2-car-free-download-png-thumb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4_2_car_png_hd {
+            get {
+                object obj = ResourceManager.GetObject("4-2-car-png-hd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap back_24838_640__1_ {
             get {
                 object obj = ResourceManager.GetObject("back-24838_640 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Finish_Line_PNG_HD {
+            get {
+                object obj = ResourceManager.GetObject("Finish-Line-PNG-HD", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
