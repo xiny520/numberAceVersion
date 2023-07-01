@@ -54,8 +54,9 @@
             this.finishImg = new System.Windows.Forms.PictureBox();
             this.AlCar1 = new System.Windows.Forms.PictureBox();
             this.carImg = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.AlCar2 = new System.Windows.Forms.PictureBox();
+            this.awards = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.gameQuestionBack.SuspendLayout();
             this.optionsPanel2.SuspendLayout();
             this.optionsPanel1.SuspendLayout();
@@ -66,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.AlCar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AlCar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.awards)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMini
@@ -276,7 +278,7 @@
             // 
             this.gameLbl.AutoSize = true;
             this.gameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameLbl.Location = new System.Drawing.Point(67, 79);
+            this.gameLbl.Location = new System.Drawing.Point(61, 19);
             this.gameLbl.Name = "gameLbl";
             this.gameLbl.Size = new System.Drawing.Size(472, 91);
             this.gameLbl.TabIndex = 0;
@@ -288,15 +290,15 @@
             this.rankingLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rankingLbl.Location = new System.Drawing.Point(227, 189);
             this.rankingLbl.Name = "rankingLbl";
-            this.rankingLbl.Size = new System.Drawing.Size(173, 63);
+            this.rankingLbl.Size = new System.Drawing.Size(0, 63);
             this.rankingLbl.TabIndex = 1;
-            this.rankingLbl.Text = "label2";
             // 
             // gamePanel
             // 
+            this.gamePanel.Controls.Add(this.awards);
             this.gamePanel.Controls.Add(this.rankingLbl);
             this.gamePanel.Controls.Add(this.gameLbl);
-            this.gamePanel.Location = new System.Drawing.Point(903, 753);
+            this.gamePanel.Location = new System.Drawing.Point(650, 770);
             this.gamePanel.Name = "gamePanel";
             this.gamePanel.Size = new System.Drawing.Size(578, 311);
             this.gamePanel.TabIndex = 37;
@@ -331,6 +333,25 @@
             this.carImg.TabIndex = 2;
             this.carImg.TabStop = false;
             // 
+            // AlCar2
+            // 
+            this.AlCar2.BackgroundImage = global::numberAceVersion.Properties.Resources._4_2_car_png_hd;
+            this.AlCar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AlCar2.Location = new System.Drawing.Point(213, 498);
+            this.AlCar2.Name = "AlCar2";
+            this.AlCar2.Size = new System.Drawing.Size(240, 188);
+            this.AlCar2.TabIndex = 40;
+            this.AlCar2.TabStop = false;
+            // 
+            // awards
+            // 
+            this.awards.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.awards.Location = new System.Drawing.Point(130, 139);
+            this.awards.Name = "awards";
+            this.awards.Size = new System.Drawing.Size(316, 98);
+            this.awards.TabIndex = 2;
+            this.awards.TabStop = false;
+            // 
             // button1
             // 
             this.button1.BackgroundImage = global::numberAceVersion.Properties.Resources.back_24838_640__1_;
@@ -341,16 +362,6 @@
             this.button1.TabIndex = 33;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // AlCar2
-            // 
-            this.AlCar2.BackgroundImage = global::numberAceVersion.Properties.Resources._4_2_car_png_hd;
-            this.AlCar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AlCar2.Location = new System.Drawing.Point(627, 692);
-            this.AlCar2.Name = "AlCar2";
-            this.AlCar2.Size = new System.Drawing.Size(240, 188);
-            this.AlCar2.TabIndex = 40;
-            this.AlCar2.TabStop = false;
             // 
             // gamePage
             // 
@@ -384,6 +395,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.AlCar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AlCar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.awards)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,5 +429,6 @@
         private System.Windows.Forms.PictureBox finishImg;
         private System.Windows.Forms.PictureBox AlCar1;
         private System.Windows.Forms.PictureBox AlCar2;
+        private System.Windows.Forms.PictureBox awards;
     }
 }

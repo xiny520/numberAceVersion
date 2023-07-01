@@ -399,34 +399,39 @@ namespace numberAceVersion
                 }
                 
             }
-            if (carImg.Bounds.IntersectsWith(finishImg.Bounds))
+            if (carImg.Bounds.IntersectsWith(finishImg.Bounds) == true)
             {
-                endGame(sender,e);
-                gamePanel.Visible = true;
-                rankingLbl.Text = "Hooray! You ranked 1st!";
-                carImg.BringToFront();
-
-                if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds))
+                if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == false)
                 {
-                    gamePanel.Visible = true;
-                    rankingLbl.Text = "Better job next time! You ranked 2nd!";
-
-                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds))
+                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == false)
                     {
+                        endGame(sender, e);
                         gamePanel.Visible = true;
-                        rankingLbl.Text = "Better job next time! You ranked 3rd!";
+                        carImg.BringToFront();
+                        awards.Image = Properties.Resources.pixil_frame_03;
                     }
-
                 }
-                if (AlCar2.Bounds.IntersectsWith(finishImg.Bounds))
+            }
+            if (carImg.Bounds.IntersectsWith(finishImg.Bounds) == false)
+            {
+                if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == true)
                 {
-                    gamePanel.Visible = true;
-                    rankingLbl.Text = "Better job next time! You ranked 2nd!";
-
-                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds))
+                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == false)
                     {
+                        endGame(sender, e);
                         gamePanel.Visible = true;
-                        rankingLbl.Text = "Better job next time! You ranked 3rd!";
+                        carImg.BringToFront();
+                        awards.Image = Properties.Resources.pixil_frame_02;
+                    }
+                }
+                if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == true)
+                {
+                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == true)
+                    {
+                        endGame(sender, e);
+                        gamePanel.Visible = true;
+                        carImg.BringToFront();
+                        awards.Image = Properties.Resources.pixil_frame_01;
                     }
                 }
 

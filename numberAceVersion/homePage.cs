@@ -23,5 +23,11 @@ namespace numberAceVersion
             customPage f3 = new customPage();
             f3.Show();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            loginPage f2 = new loginPage();
+            f2.Show();
+        }
     }
 }
