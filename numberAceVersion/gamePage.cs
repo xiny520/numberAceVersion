@@ -27,19 +27,37 @@ namespace numberAceVersion
         public static int num2; // create an int variable named num2
         public static int correctCount; // create an int variable named correctCount
         public static bool stop = false; // create a bool variable and make stop false
-        public static gamePage instance;
-        public Label lb1;
 
         public gamePage()
         {
             InitializeComponent();
-            instance = this;
-            lb1 = questionLabel;
         }
 
         private void gamePage_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void addGo(object sender, EventArgs e)
+        {
+            answer = num1 + num2;
+            questionLabel.Text = num1.ToString() + " + " + num2.ToString();
+        }
+        public void subGo(object sender, EventArgs e)
+        {
+            answer = num1 - num2;
+            questionLabel.Text = num1.ToString() + " - " + num2.ToString();
+        }
+        public void mulGo(object sender, EventArgs e)
+        {
+            answer = num1 * num2;
+            questionLabel.Text = num1.ToString() + " x " + num2.ToString();
+        }
+        public void divGo(object sender, EventArgs e)
+        {
+            int multi = num1 * num2;
+            answer = num1;
+            questionLabel.Text = multi.ToString() + " ÷ " + num2.ToString();
         }
 
         private void generate_Question(object sender, EventArgs e)
@@ -68,19 +86,19 @@ namespace numberAceVersion
                             quesRan = rnd.Next(1, 5); // generate random option int (1 
                             if (quesRan == 1)
                             {
-                                Program.addGo(sender, e);
+                                addGo(sender, e);
                             }
                             if (quesRan == 2)
                             {
-                                Program.subGo(sender, e);
+                                subGo(sender, e);
                             }
                             if (quesRan == 3)
                             {
-                                Program.mulGo(sender, e);
+                                mulGo(sender, e);
                             }
                             if (quesRan == 4)
                             {
-                                Program.divGo(sender, e);
+                                divGo(sender, e);
                             }
                         }
                         if (f.diviCheck.Checked == false)
@@ -88,15 +106,15 @@ namespace numberAceVersion
                             quesRan = rnd.Next(1, 4); // generate random option int (1 
                             if (quesRan == 1)
                             {
-                                Program.addGo(sender, e);
+                                addGo(sender, e);
                             }
                             if (quesRan == 2)
                             {
-                                Program.subGo(sender, e);
+                                subGo(sender, e);
                             }
                             if (quesRan == 3)
                             {
-                                Program.mulGo(sender, e);
+                                mulGo(sender, e);
                             }
                         }
                     }
@@ -107,15 +125,15 @@ namespace numberAceVersion
                             quesRan = rnd.Next(1, 4);
                             if (quesRan == 1)
                             {
-                                Program.addGo(sender, e);
+                                addGo(sender, e);
                             }
                             if (quesRan == 2)
                             {
-                                Program.subGo(sender, e);
+                                subGo(sender, e);
                             }
                             if (quesRan == 3)
                             {
-                                Program.divGo(sender, e);
+                                divGo(sender, e);
                             }
                         }
                         if (f.diviCheck.Checked == false)
@@ -123,11 +141,11 @@ namespace numberAceVersion
                             quesRan = rnd.Next(1, 3);
                             if (quesRan == 1)
                             {
-                                Program.addGo(sender, e);
+                                addGo(sender, e);
                             }
                             if (quesRan == 2)
                             {
-                                Program.subGo(sender, e);
+                                subGo(sender, e);
                             }
                         }
                     }
@@ -141,15 +159,15 @@ namespace numberAceVersion
                             quesRan = rnd.Next(1, 4);
                             if (quesRan == 1)
                             {
-                                Program.addGo(sender, e);
+                                addGo(sender, e);
                             }
                             if (quesRan == 2)
                             {
-                                Program.mulGo(sender, e);
+                                mulGo(sender, e);
                             }
                             if (quesRan == 3)
                             {
-                                Program.divGo(sender, e);
+                                divGo(sender, e);
                             }
 
                         }
@@ -158,11 +176,11 @@ namespace numberAceVersion
                             quesRan = rnd.Next(1, 3);
                             if (quesRan == 1)
                             {
-                                Program.addGo(sender, e);
+                                addGo(sender, e);
                             }
                             if (quesRan == 2)
                             {
-                                Program.mulGo(sender, e);
+                                mulGo(sender, e);
                             }
                         }
                     }
@@ -173,16 +191,16 @@ namespace numberAceVersion
                             quesRan = rnd.Next(1, 3);
                             if (quesRan == 1)
                             {
-                                Program.addGo(sender, e);
+                                addGo(sender, e);
                             }
                             if (quesRan == 2)
                             {
-                                Program.divGo(sender, e);
+                                divGo(sender, e);
                             }
                         }
                         if (f.diviCheck.Checked == false)
                         {
-                            Program.addGo(sender, e);
+                            addGo(sender, e);
                         }
                     }
                 }
@@ -199,15 +217,15 @@ namespace numberAceVersion
                             quesRan = rnd.Next(1, 4);
                             if (quesRan == 1)
                             {
-                                Program.subGo(sender, e);
+                                subGo(sender, e);
                             }
                             if (quesRan == 2)
                             {
-                                Program.mulGo(sender, e);
+                                mulGo(sender, e);
                             }
                             if (quesRan == 3)
                             {
-                                Program.divGo(sender, e);
+                                divGo(sender, e);
                             }
                         }
                         if (f.diviCheck.Checked == false)
@@ -215,11 +233,11 @@ namespace numberAceVersion
                             quesRan = rnd.Next(1, 3);
                             if (quesRan == 1)
                             {
-                                Program.subGo(sender, e);
+                                subGo(sender, e);
                             }
                             if (quesRan == 2)
                             {
-                                Program.mulGo(sender, e);
+                                mulGo(sender, e);
                             }
                         }
                     }
@@ -230,16 +248,16 @@ namespace numberAceVersion
                             quesRan = rnd.Next(1, 3);
                             if (quesRan == 1)
                             {
-                                Program.subGo(sender, e);
+                                subGo(sender, e);
                             }
                             if (quesRan == 2)
                             {
-                                Program.divGo(sender, e);
+                                divGo(sender, e);
                             }
                         }
                         if (f.diviCheck.Checked == false)
                         {
-                            Program.subGo(sender, e);
+                            subGo(sender, e);
                         }
                     }
                 }
@@ -252,17 +270,17 @@ namespace numberAceVersion
                             quesRan = rnd.Next(1, 3);
                             if (quesRan == 1)
                             {
-                                Program.mulGo(sender, e);
+                                mulGo(sender, e);
                             }
                             if (quesRan == 2)
                             {
-                                Program.divGo(sender, e);
+                                divGo(sender, e);
                             }
 
                         }
                         if (f.diviCheck.Checked == false)
                         {
-                            Program.mulGo(sender, e);
+                            mulGo(sender, e);
                         }
 
                     }
@@ -270,11 +288,11 @@ namespace numberAceVersion
                     {
                         if (f.diviCheck.Checked == true)
                         {
-                            Program.divGo(sender, e);
+                            divGo(sender, e);
                         }
                         if (f.diviCheck.Checked == false)
                         {
-                            gamePage.instance.lb1.Text = "You didn't pick anything!!";
+                            questionLabel.Text = "You didn't pick anything!!";
                         }
                     }
                 }
@@ -397,8 +415,8 @@ namespace numberAceVersion
                 timerscreen.Visible = true; // make the label displaying the longer timer visible 
                 countdownTimer.Start(); // start the countdown timer 
                 seconds = 5; // set the countdown timer to 20 seconds
-                //generate_Question(sender, e); // go the generate_Question method (down below!)
-                //highScoreLabel.Text = highscore.ToString();
+                generate_Question(sender, e); // go the generate_Question method (down below!)
+                highScoreLabel.Text = highscore.ToString();
                 score = 0;
                 //panel6.Location = new Point(200, 700);
                 optionButton1.Enabled = true;

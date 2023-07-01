@@ -13,27 +13,7 @@ namespace numberAceVersion
         /// </summary>
         /// 
 
-        public static void addGo(object sender, EventArgs e)
-        {
-            gamePage.answer = gamePage.num1 + gamePage.num2;
-            gamePage.instance.lb1.Text = gamePage.num1.ToString() + " + " + gamePage.num2.ToString();
-        }
-        public static void subGo(object sender, EventArgs e)
-        {
-            gamePage.answer = gamePage.num1 - gamePage.num2;
-            gamePage.instance.lb1.Text = gamePage.num1.ToString() + " - " + gamePage.num2.ToString();
-        }
-        public static void mulGo(object sender, EventArgs e)
-        {
-            gamePage.answer = gamePage.num1 * gamePage.num2;
-            gamePage.instance.lb1.Text = gamePage.num1.ToString() + " x " + gamePage.num2.ToString();
-        }
-        public static void divGo(object sender, EventArgs e)
-        {
-            int multi = gamePage.num1 * gamePage.num2;
-            gamePage.answer = gamePage.num1;
-            gamePage.instance.lb1.Text = multi.ToString() + " ÷ " + gamePage.num2.ToString();
-        }
+        
 
         [STAThread]
         static void Main()
