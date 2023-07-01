@@ -354,7 +354,7 @@ namespace numberAceVersion
                 carImg.Location = new Point(200, 700);
                 correctCount = 0;
             }
-            if (carImg.Bounds.IntersectsWith(finishImg.Bounds) == true)
+            if (carImg.Bounds.IntersectsWith(finishImg.Bounds) == true) // if it is true the car comes in touch with the finishing line
             {
                 if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == false)
                 {
