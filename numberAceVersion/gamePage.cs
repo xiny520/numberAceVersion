@@ -62,7 +62,42 @@ namespace numberAceVersion
 
         private void generate_Question(object sender, EventArgs e)
         {
-
+            if (carImg.Bounds.IntersectsWith(finishImg.Bounds) == true)
+            {
+                if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == false)
+                {
+                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == false)
+                    {
+                        endGame(sender, e);
+                        gamePanel.Visible = true;
+                        carImg.BringToFront();
+                        awards.Image = Properties.Resources.pixil_frame_03;
+                    }
+                }
+            }
+            if (carImg.Bounds.IntersectsWith(finishImg.Bounds) == false)
+            {
+                if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == true)
+                {
+                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == false)
+                    {
+                        endGame(sender, e);
+                        gamePanel.Visible = true;
+                        carImg.BringToFront();
+                        awards.Image = Properties.Resources.pixil_frame_02;
+                    }
+                }
+                if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == true)
+                {
+                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == true)
+                    {
+                        endGame(sender, e);
+                        gamePanel.Visible = true;
+                        carImg.BringToFront();
+                        awards.Image = Properties.Resources.pixil_frame_01;
+                    }
+                }
+            }
             // basically resetting everything
             op1 = false; // set op1 as false
             op2 = false; // set op2 as false
@@ -360,7 +395,6 @@ namespace numberAceVersion
 
         public void endGame(object sender, EventArgs e)
         {
-            countdownTimer.Stop(); // stop timer
             questionLabel.Text = ""; // empty the question
             optionButton1.Enabled = false;
             optionButton2.Enabled = false;
@@ -371,7 +405,7 @@ namespace numberAceVersion
             optionButton3.Text = ""; // and this one
             optionButton4.Text = ""; // and this one
             totalScore.Text = score.ToString(); // write in the totalScore label: "Total Score = (insert score)"
-            
+            carImg.Location = new Point(61, 692);
         }
 
         private void beginButton_Click(object sender, EventArgs e)
@@ -381,61 +415,6 @@ namespace numberAceVersion
             countdownPanel.Visible = false;
             lblMini.Visible = false;
             gamePanel.Visible = false;
-            if (stop == true)
-            {
-                countdownTimer.Start();
-            }
-        }
-
-        private void countdownTimer_Tick(object sender, EventArgs e)
-        {
-            timerscreen.Text = seconds--.ToString();
-            if (seconds < 0) // when timer ends basically
-            {
-                //endGame(sender, e);
-                if (score > highscore)
-                {
-                    highscore = score;
-                }
-                
-            }
-            if (carImg.Bounds.IntersectsWith(finishImg.Bounds) == true)
-            {
-                if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == false)
-                {
-                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == false)
-                    {
-                        endGame(sender, e);
-                        gamePanel.Visible = true;
-                        carImg.BringToFront();
-                        awards.Image = Properties.Resources.pixil_frame_03;
-                    }
-                }
-            }
-            if (carImg.Bounds.IntersectsWith(finishImg.Bounds) == false)
-            {
-                if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == true)
-                {
-                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == false)
-                    {
-                        endGame(sender, e);
-                        gamePanel.Visible = true;
-                        carImg.BringToFront();
-                        awards.Image = Properties.Resources.pixil_frame_02;
-                    }
-                }
-                if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == true)
-                {
-                    if (AlCar1.Bounds.IntersectsWith(finishImg.Bounds) == true)
-                    {
-                        endGame(sender, e);
-                        gamePanel.Visible = true;
-                        carImg.BringToFront();
-                        awards.Image = Properties.Resources.pixil_frame_01;
-                    }
-                }
-
-            }
         }
 
         private void miniTimer_Tick(object sender, EventArgs e)
@@ -443,14 +422,12 @@ namespace numberAceVersion
             countdownPanel.Visible = true;
             lblMini.Visible = true;
             lblMini.Text = seconds--.ToString();
+            gamePanel.Visible = false;
 
             if (seconds < 0)
             {
                 miniTimer.Stop(); // stop the shorter timer
                 lblMini.Visible = false; // make the label displaying the shorter timer invisible
-                timerscreen.Visible = true; // make the label displaying the longer timer visible 
-                countdownTimer.Start(); // start the countdown timer 
-                seconds = 5; // set the countdown timer to 20 seconds
                 generate_Question(sender, e); // go the generate_Question method (down below!)
                 highScoreLabel.Text = highscore.ToString();
                 score = 0;
@@ -462,6 +439,8 @@ namespace numberAceVersion
                 //panel5.Visible = false;
                 correctCount = 0;
             }
+
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -529,6 +508,21 @@ namespace numberAceVersion
             {
                 incorrect_Answer(sender, e);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            lblMini.Visible = true;
+            seconds = 3;
+            lblMini.Text = seconds--.ToString();
+            miniTimer.Start();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // hide this form (gamepage)
+            homePage back = new homePage(); // link to homepage
+            back.Show(); // show homepage form
         }
     }
 }

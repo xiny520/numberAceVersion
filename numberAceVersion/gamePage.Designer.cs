@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lblMini = new System.Windows.Forms.Label();
-            this.timerscreen = new System.Windows.Forms.Label();
             this.highScoreLabel = new System.Windows.Forms.Label();
             this.scorePoints = new System.Windows.Forms.Label();
             this.gameQuestionBack = new System.Windows.Forms.Panel();
@@ -44,30 +43,33 @@
             this.questionPanel = new System.Windows.Forms.Panel();
             this.questionLabel = new System.Windows.Forms.Label();
             this.totalScore = new System.Windows.Forms.Label();
-            this.countdownTimer = new System.Windows.Forms.Timer(this.components);
             this.miniTimer = new System.Windows.Forms.Timer(this.components);
             this.beginButton = new System.Windows.Forms.Button();
             this.countdownPanel = new System.Windows.Forms.Panel();
             this.gameLbl = new System.Windows.Forms.Label();
             this.rankingLbl = new System.Windows.Forms.Label();
             this.gamePanel = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.awards = new System.Windows.Forms.PictureBox();
+            this.AlCar2 = new System.Windows.Forms.PictureBox();
             this.finishImg = new System.Windows.Forms.PictureBox();
             this.AlCar1 = new System.Windows.Forms.PictureBox();
             this.carImg = new System.Windows.Forms.PictureBox();
-            this.AlCar2 = new System.Windows.Forms.PictureBox();
-            this.awards = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.gameQuestionBack.SuspendLayout();
             this.optionsPanel2.SuspendLayout();
             this.optionsPanel1.SuspendLayout();
             this.questionPanel.SuspendLayout();
             this.countdownPanel.SuspendLayout();
             this.gamePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.awards)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlCar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finishImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AlCar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carImg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AlCar2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.awards)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblMini
@@ -75,31 +77,19 @@
             this.lblMini.AutoSize = true;
             this.lblMini.Font = new System.Drawing.Font("Microsoft Sans Serif", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMini.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.lblMini.Location = new System.Drawing.Point(95, 46);
+            this.lblMini.Location = new System.Drawing.Point(99, 12);
             this.lblMini.Name = "lblMini";
             this.lblMini.Size = new System.Drawing.Size(630, 211);
             this.lblMini.TabIndex = 25;
             this.lblMini.Text = "Ready";
             this.lblMini.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // timerscreen
-            // 
-            this.timerscreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timerscreen.Location = new System.Drawing.Point(502, 12);
-            this.timerscreen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.timerscreen.Name = "timerscreen";
-            this.timerscreen.Size = new System.Drawing.Size(348, 116);
-            this.timerscreen.TabIndex = 22;
-            this.timerscreen.Text = "START!";
-            this.timerscreen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.timerscreen.Visible = false;
-            // 
             // highScoreLabel
             // 
             this.highScoreLabel.AllowDrop = true;
             this.highScoreLabel.AutoSize = true;
             this.highScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.highScoreLabel.Location = new System.Drawing.Point(557, 142);
+            this.highScoreLabel.Location = new System.Drawing.Point(477, 57);
             this.highScoreLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.highScoreLabel.Name = "highScoreLabel";
             this.highScoreLabel.Size = new System.Drawing.Size(235, 51);
@@ -245,11 +235,6 @@
             this.totalScore.TabIndex = 8;
             this.totalScore.Text = "0";
             // 
-            // countdownTimer
-            // 
-            this.countdownTimer.Interval = 1000;
-            this.countdownTimer.Tick += new System.EventHandler(this.countdownTimer_Tick);
-            // 
             // miniTimer
             // 
             this.miniTimer.Interval = 1000;
@@ -257,7 +242,7 @@
             // 
             // beginButton
             // 
-            this.beginButton.Location = new System.Drawing.Point(44, 944);
+            this.beginButton.Location = new System.Drawing.Point(39, 958);
             this.beginButton.Margin = new System.Windows.Forms.Padding(4);
             this.beginButton.Name = "beginButton";
             this.beginButton.Size = new System.Drawing.Size(178, 137);
@@ -269,9 +254,9 @@
             // countdownPanel
             // 
             this.countdownPanel.Controls.Add(this.lblMini);
-            this.countdownPanel.Location = new System.Drawing.Point(61, 337);
+            this.countdownPanel.Location = new System.Drawing.Point(53, 438);
             this.countdownPanel.Name = "countdownPanel";
-            this.countdownPanel.Size = new System.Drawing.Size(806, 306);
+            this.countdownPanel.Size = new System.Drawing.Size(806, 240);
             this.countdownPanel.TabIndex = 36;
             // 
             // gameLbl
@@ -295,19 +280,60 @@
             // 
             // gamePanel
             // 
+            this.gamePanel.Controls.Add(this.button3);
+            this.gamePanel.Controls.Add(this.button2);
             this.gamePanel.Controls.Add(this.awards);
             this.gamePanel.Controls.Add(this.rankingLbl);
             this.gamePanel.Controls.Add(this.gameLbl);
-            this.gamePanel.Location = new System.Drawing.Point(650, 770);
+            this.gamePanel.Location = new System.Drawing.Point(313, 784);
             this.gamePanel.Name = "gamePanel";
             this.gamePanel.Size = new System.Drawing.Size(578, 311);
             this.gamePanel.TabIndex = 37;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(294, 224);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(223, 65);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Return Home";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(64, 224);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(142, 65);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Retry?";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // awards
+            // 
+            this.awards.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.awards.Location = new System.Drawing.Point(129, 113);
+            this.awards.Name = "awards";
+            this.awards.Size = new System.Drawing.Size(316, 98);
+            this.awards.TabIndex = 2;
+            this.awards.TabStop = false;
+            // 
+            // AlCar2
+            // 
+            this.AlCar2.BackgroundImage = global::numberAceVersion.Properties.Resources._4_2_car_png_hd;
+            this.AlCar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AlCar2.Location = new System.Drawing.Point(584, 725);
+            this.AlCar2.Name = "AlCar2";
+            this.AlCar2.Size = new System.Drawing.Size(240, 188);
+            this.AlCar2.TabIndex = 40;
+            this.AlCar2.TabStop = false;
             // 
             // finishImg
             // 
             this.finishImg.BackgroundImage = global::numberAceVersion.Properties.Resources.Finish_Line_PNG_HD;
             this.finishImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.finishImg.Location = new System.Drawing.Point(61, 179);
+            this.finishImg.Location = new System.Drawing.Point(39, 290);
             this.finishImg.Name = "finishImg";
             this.finishImg.Size = new System.Drawing.Size(852, 126);
             this.finishImg.TabIndex = 38;
@@ -317,7 +343,7 @@
             // 
             this.AlCar1.BackgroundImage = global::numberAceVersion.Properties.Resources._4_2_car_png_hd;
             this.AlCar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AlCar1.Location = new System.Drawing.Point(326, 692);
+            this.AlCar1.Location = new System.Drawing.Point(320, 725);
             this.AlCar1.Name = "AlCar1";
             this.AlCar1.Size = new System.Drawing.Size(240, 188);
             this.AlCar1.TabIndex = 39;
@@ -327,59 +353,47 @@
             // 
             this.carImg.BackgroundImage = global::numberAceVersion.Properties.Resources._3_2_car_free_download_png_thumb;
             this.carImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.carImg.Location = new System.Drawing.Point(61, 692);
+            this.carImg.Location = new System.Drawing.Point(62, 725);
             this.carImg.Name = "carImg";
             this.carImg.Size = new System.Drawing.Size(240, 188);
             this.carImg.TabIndex = 2;
             this.carImg.TabStop = false;
             // 
-            // AlCar2
-            // 
-            this.AlCar2.BackgroundImage = global::numberAceVersion.Properties.Resources._4_2_car_png_hd;
-            this.AlCar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AlCar2.Location = new System.Drawing.Point(213, 498);
-            this.AlCar2.Name = "AlCar2";
-            this.AlCar2.Size = new System.Drawing.Size(240, 188);
-            this.AlCar2.TabIndex = 40;
-            this.AlCar2.TabStop = false;
-            // 
-            // awards
-            // 
-            this.awards.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.awards.Location = new System.Drawing.Point(130, 139);
-            this.awards.Name = "awards";
-            this.awards.Size = new System.Drawing.Size(316, 98);
-            this.awards.TabIndex = 2;
-            this.awards.TabStop = false;
-            // 
             // button1
             // 
             this.button1.BackgroundImage = global::numberAceVersion.Properties.Resources.back_24838_640__1_;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(3, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(276, 272);
             this.button1.TabIndex = 33;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.carImg);
+            this.panel1.Controls.Add(this.gamePanel);
+            this.panel1.Controls.Add(this.finishImg);
+            this.panel1.Controls.Add(this.highScoreLabel);
+            this.panel1.Controls.Add(this.beginButton);
+            this.panel1.Controls.Add(this.AlCar2);
+            this.panel1.Controls.Add(this.countdownPanel);
+            this.panel1.Controls.Add(this.AlCar1);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(936, 1127);
+            this.panel1.TabIndex = 41;
+            // 
             // gamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1953, 1152);
-            this.Controls.Add(this.AlCar2);
-            this.Controls.Add(this.finishImg);
-            this.Controls.Add(this.AlCar1);
-            this.Controls.Add(this.carImg);
-            this.Controls.Add(this.gamePanel);
-            this.Controls.Add(this.beginButton);
-            this.Controls.Add(this.countdownPanel);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.timerscreen);
-            this.Controls.Add(this.highScoreLabel);
             this.Controls.Add(this.scorePoints);
             this.Controls.Add(this.gameQuestionBack);
+            this.Controls.Add(this.panel1);
             this.Name = "gamePage";
             this.Text = "gamePage";
             this.Load += new System.EventHandler(this.gamePage_Load);
@@ -391,11 +405,13 @@
             this.countdownPanel.PerformLayout();
             this.gamePanel.ResumeLayout(false);
             this.gamePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.awards)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlCar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.finishImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AlCar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carImg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AlCar2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.awards)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,7 +419,6 @@
 
         #endregion
         private System.Windows.Forms.Label lblMini;
-        private System.Windows.Forms.Label timerscreen;
         private System.Windows.Forms.Label highScoreLabel;
         private System.Windows.Forms.Label scorePoints;
         private System.Windows.Forms.Button button1;
@@ -418,7 +433,6 @@
         private System.Windows.Forms.Panel questionPanel;
         public System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.Label totalScore;
-        private System.Windows.Forms.Timer countdownTimer;
         private System.Windows.Forms.Timer miniTimer;
         private System.Windows.Forms.Button beginButton;
         private System.Windows.Forms.Panel countdownPanel;
@@ -430,5 +444,8 @@
         private System.Windows.Forms.PictureBox AlCar1;
         private System.Windows.Forms.PictureBox AlCar2;
         private System.Windows.Forms.PictureBox awards;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

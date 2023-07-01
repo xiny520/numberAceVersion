@@ -26,6 +26,7 @@ namespace numberAceVersion
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            this.Hide();
             loginPage f2 = new loginPage();
             f2.Show();
         }
